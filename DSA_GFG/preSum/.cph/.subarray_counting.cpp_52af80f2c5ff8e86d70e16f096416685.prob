@@ -1,0 +1,1 @@
+{"name":"Local: subarray_counting","url":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\preSum\\subarray_counting.cpp","tests":[{"id":1771320392890,"input":"5 5\n1 2 3 2 -2","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\preSum\\subarray_counting.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: 020_chia_mia","url":"d:\\PROGRAMMING\\DSA\\020_chia_mia.cpp","tests":[{"id":1768413949803,"input":"14\n3","output":"4 2"},{"id":1768413968521,"input":"11\n2","output":"5 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\020_chia_mia.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: Binary_Subarray_Sum","url":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\preSum\\Binary_Subarray_Sum.cpp","tests":[{"id":1771341013781,"input":"5 2\n1 0 1 0 1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\preSum\\Binary_Subarray_Sum.cpp","group":"local","local":true}

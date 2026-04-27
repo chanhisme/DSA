@@ -1,0 +1,1 @@
+{"name":"Local: basic","url":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\preSum\\basic.cpp","tests":[{"id":1771318289898,"input":"5\n1 2 3 4 5\n2 4","output":"5000000000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\preSum\\basic.cpp","group":"local","local":true}

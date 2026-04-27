@@ -1,0 +1,1 @@
+{"name":"Local: p5_pyramid","url":"d:\\PROGRAMMING\\DSA\\Loop_pattern\\p5_pyramid.cpp","tests":[{"id":1775282921065,"input":"5","output":"    *\r\n   ***\r\n  *****\r\n *******\r\n*********\r\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\Loop_pattern\\p5_pyramid.cpp","group":"local","local":true}
