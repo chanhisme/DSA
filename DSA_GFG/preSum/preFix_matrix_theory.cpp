@@ -34,7 +34,7 @@ int main(){
         cout<<res<<endl;
     }
 
-
+    //Number of element in area = (x2-x1 + 1) * (y2-y1+1);
 
 
 
