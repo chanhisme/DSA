@@ -28,15 +28,13 @@ int main(){
         pd[l[i]] ++;
         pd[r[i] + 1] --;
     }
-    vector <int> res(maxVal+2);
-    res[0] = pd[0];
     for(int i = 1; i < maxVal+2; i++){
-        res[i] = res[i-1] + pd[i];
+        pd[i] += pd[i-1];
     }
     int best = 0, val = 0;
     for(int i = 0; i <= maxVal+1; i++){
-        if(res[i] > best){
-            best = res[i];
+        if(pd[i] > best){
+            best = pd[i];
             val = i;
         }
     }
