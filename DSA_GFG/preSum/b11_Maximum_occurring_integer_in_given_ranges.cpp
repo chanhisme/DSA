@@ -23,22 +23,24 @@ int main(){
         cin >> x;
         maxVal = max(maxVal, x);
     }
-    vector <int> diff(maxVal+2);
-    for(int i = 0; i < n; i++) {
-        diff[l[i]]++;
-        diff[r[i] + 1]--;
+    vector <int> pd(maxVal + 2, 0);
+    for(int i = 0; i < n; i++){
+        pd[l[i]] ++;
+        pd[r[i] + 1] --;
+    }
+    vector <int> res(maxVal+2);
+    res[0] = pd[0];
+    for(int i = 1; i < maxVal+2; i++){
+        res[i] = res[i-1] + pd[i];
     }
     int best = 0, val = 0;
-    for(int i = 1; i <= maxVal; i++) {
-        diff[i] += diff[i - 1];
-
-        if(diff[i] > best) {
-            best = diff[i];
+    for(int i = 0; i <= maxVal+1; i++){
+        if(res[i] > best){
+            best = res[i];
             val = i;
         }
     }
-
-    cout << val;
+    cout<<val;
     
 
 
