@@ -1,0 +1,1 @@
+{"name":"Local: b4ABit++","url":"d:\\PROGRAMMING\\DSA\\codeForce_dsa\\b4ABit++.cpp","tests":[{"id":1777689096343,"input":"1\n++X","output":"1"},{"id":1777689456833,"input":"2\nX++\n--X","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\codeForce_dsa\\b4ABit++.cpp","group":"local","local":true}

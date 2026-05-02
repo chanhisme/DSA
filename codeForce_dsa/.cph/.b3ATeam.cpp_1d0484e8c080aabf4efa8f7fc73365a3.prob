@@ -1,0 +1,1 @@
+{"name":"Local: b3ATeam","url":"d:\\PROGRAMMING\\DSA\\codeForce_dsa\\b3ATeam.cpp","tests":[{"id":1777688545191,"input":"3\n1 1 0\n1 1 1\n1 0 0\n","output":"2"},{"id":1777688558633,"input":"2\n1 0 0\n0 1 1\n","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\codeForce_dsa\\b3ATeam.cpp","group":"local","local":true}
