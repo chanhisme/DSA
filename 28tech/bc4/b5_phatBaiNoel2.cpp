@@ -28,8 +28,8 @@ int main(){
             sum -= a[i];
             i++;
             if(currLen < minLen){
-            minLen = currLen;
-        }
+                minLen = currLen;
+            }
         }
         
     }

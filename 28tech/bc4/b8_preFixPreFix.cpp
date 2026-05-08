@@ -25,7 +25,7 @@ int main() {
     int l[maxn], r[maxn], d[maxn];
     int n, m, k;
     cin >> n >> m >> k;
-    vector <int> a(n+3, 0);
+    vector <int> a(n+1);
     for(int i = 1; i <= n; i++){
         cin >> a[i];
     }
