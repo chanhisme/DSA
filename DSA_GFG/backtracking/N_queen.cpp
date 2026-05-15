@@ -14,17 +14,19 @@ using namespace std;
             return;
         }
         for(int col = 0; col < n; col ++){
-            if(!visitedCol[col] && !visitedDia1[row-col + (n-1)] && !visitedDia2[row + col]){
-                visitedCol[col] = 1;
-                visitedDia1[row-col + (n-1)] = 1;
-                visitedDia2[row + col] = 1;
-                res[row][col] = row + 1;
-                solve(row+1, n, visitedDia1, visitedDia2, visitedCol, res);
-                visitedCol[col] = 0;
-                visitedDia1[row-col + (n-1)] = 0;
-                visitedDia2[row + col] = 0;
-                res[row][col] = 0;
+            if(visitedCol[col] || visitedDia1[row-col + (n-1)] || visitedDia2[row + col]){
+                continue;
             }
+            visitedCol[col] = 1;
+            visitedDia1[row-col + (n-1)] = 1;
+            visitedDia2[row + col] = 1;
+            res[row][col] = row + 1;
+            solve(row+1, n, visitedDia1, visitedDia2, visitedCol, res);
+            visitedCol[col] = 0;
+            visitedDia1[row-col + (n-1)] = 0;
+            visitedDia2[row + col] = 0;
+            res[row][col] = 0;
+        
         }
 
     }
