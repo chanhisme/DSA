@@ -19,7 +19,7 @@ int main(){
     cout<<m+1<<endl;
     string res = to_string(m);
     cout<<res;
-
+    
 
 
 

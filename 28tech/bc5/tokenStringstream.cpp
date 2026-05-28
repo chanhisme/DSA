@@ -15,6 +15,13 @@ int main(){
     while(getline(ss, world, '@')){
         cout<<world<<" ";
     }
+    
+
+
+
+    
+
+
 
 
 
