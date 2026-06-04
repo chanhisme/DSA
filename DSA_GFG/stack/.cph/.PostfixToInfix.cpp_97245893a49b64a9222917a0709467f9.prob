@@ -1,0 +1,1 @@
+{"name":"Local: PostfixToInfix","url":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\stack\\PostfixToInfix.cpp","tests":[{"id":1780542409375,"input":"abc++","output":"(a + (b + c))"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\DSA_GFG\\stack\\PostfixToInfix.cpp","group":"local","local":true}
