@@ -18,7 +18,7 @@ void solve(int x, int y, int n, vector <vector <int>> &a){
     for(int i = 0; i < 4; i++){
         int nx = x + dx[i];
         int ny = y + dy[i];
-        if( nx >= 0 && nx < n && ny >= 0 && ny < n && a[nx][ny] != 0 ){
+        if( nx >= 0 && nx < n && ny >= 0 && ny < n && a[nx][ny] == 1 ){
             tmp.push_back(c[i]);
             
             solve(nx, ny, n, a);
