@@ -13,13 +13,15 @@ int main(){
     for(int &x : a ) cin >> x;
     for(int i = 0; i < n; i++){
         int x = a[i];
-        int diff = abs(k-x);
-        if(cnt.count(k - x)){
-            res += cnt[diff];
+        if(k == 0){
+            res += cnt[x];
         }
         else{
-            cnt[x]++;
+            res += cnt[x-k];
+            res += cnt[x + k];
         }
+        
+        cnt[x]++;
     }
     cout<<res;
 
