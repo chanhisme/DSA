@@ -4,38 +4,28 @@
 using namespace std;
 
 int main(){
-    unordered_map <int, int> cnt;
-    long long res = 0;
     int n, k;
     cin >> n >> k;
     vector <int> a(n);
     for(int &x : a) cin >> x;
-    long long s = 0;
-    int r = 0;
-    int l = 0;
-    
-    // for(int l = 0; l < n; l++){
-    //     while(r < n && s < k){
-    //         s += a[r];
-    //         r++;
-    //     }
-    //     if(s >= k){
-    //         res += (n-r+1);
-    //     }
-    //     s -= a[l];
-    // }
-    // cout<<res;
 
-
-    for(; r < n; r++){
-        s += a[r];
-        while(s >= k){
-            s -= a[l];
-            l++;
-        }
-        res += (r-l + 1);
+    unordered_map <int, int> cnt;
+    cnt[0]++;
+    vector <int> pfs(n);
+    pfs[0] = a[0];
+    for(int i = 1; i < n; i++){
+        pfs[i]= pfs[i-1] + a[i];
     }
-    cout<< ( n * (n+1))/2 - res; 
+    int res = 0;
+    for(int i = 0; i < n; i++){
+        int x = pfs[i];
+        if(cnt.count(x - k)){
+            res += cnt[x-k];
+        }
+        cnt[x]++;
+    }
+    cout<<res;
+
 
 
     return 0;
