@@ -1,28 +1,34 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <unordered_map>
 using namespace std;
 
 int main(){
-    int n, k;
-    cin >> n >> k;
-    vector <int> a(n);
+    int n;
+    cin >> n;
+    vector <int> a(n), b(n), c(n);
     for(int &x : a) cin >> x;
-
-    unordered_map <int, int> cnt;
-    cnt[0]++;
-    vector <int> pfs(n);
-    pfs[0] = a[0];
-    for(int i = 1; i < n; i++){
-        pfs[i]= pfs[i-1] + a[i];
-    }
-    int res = 0;
+    for(int &x : b) cin >> x;
     for(int i = 0; i < n; i++){
-        int x = pfs[i];
-        if(cnt.count(x - k)){
-            res += cnt[x-k];
+        c[i] = a[i] - b[i];
+    }
+    for(int i = 1; i < n; i++){
+        c[i] += c[i-1];
+    }
+    unordered_map <int, int> cnt;
+    int res = 0;
+    for(int i  = 0; i < n; i++){
+        if(c[i] == 0){
+            res = i + 1;
         }
-        cnt[x]++;
+        if(cnt.count(c[i])){
+            res = max(res, i - cnt[c[i]] );
+        }
+        else{
+            cnt[c[i]] = i;
+        }
+
     }
     cout<<res;
 
