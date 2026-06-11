@@ -4,6 +4,9 @@
 using namespace std;
 
 int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
     int cnt[128] = {0};
     int cnt_size = 0;
     string s, t;
@@ -30,7 +33,6 @@ int main(){
             }
             
         }
-        
         while(cnt_size == curr){
             if( (r-l+1) < len){
                 len = (r-l+1);
