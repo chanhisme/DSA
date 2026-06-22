@@ -1,0 +1,1 @@
+{"name":"Local: b31_maximum_pair","url":"d:\\PROGRAMMING\\DSA\\Bai_tap_tro_giang\\b3\\b31_maximum_pair.cpp","tests":[{"id":1768290159912,"input":"5\n-1 -2 -3 9 -5","output":"8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PROGRAMMING\\DSA\\Bai_tap_tro_giang\\b3\\b31_maximum_pair.cpp","group":"local","local":true}

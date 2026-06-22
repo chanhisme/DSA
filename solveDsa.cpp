@@ -1,42 +1,28 @@
+//Longest Consecutive Sequence
 #include <iostream>
-#include <cstring>
-#include <unordered_map>
+#include <vector>
+#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
-int count(string s, int k){
-    unordered_map <char, int> mp;
-    int cnt = 0;
-    int l = 0;
-    int res = 0;
-    for(int r = 0; r < s.size(); r++){
-        if(r - l + 1 > k){
-            mp[s[l]]--;
-            if(mp[s[l]] == 0){
-                mp.erase(s[l]);
-            }
-            l++;
-            
-        }
-        
-        mp[s[r]]++;
-
-        if(r-l+1 == k && mp.size() == k-1){
-            res ++;
-        }
-        
-    }
-    return res;
-}
 
 int main(){
-    string s;
-    int k;
-    cin >> s >> k;
-    
+    int n; cin >> n;
+    vector <int> a(n);
+    for(int &x : a) cin >> x;
+    unordered_set <int> s (a.begin(), a.end());
+    int res = 0;
 
-    cout<<count(s, k);
-
-
+    for(int x : s){
+        if(s.find(x-1) == s.end()){
+            int len = 1;
+            while(s.find(x + len) != s.end()){
+                len ++;
+            }
+            res = max(res, len);
+        }
+    }
+    cout<<res;
 
 
     return 0;

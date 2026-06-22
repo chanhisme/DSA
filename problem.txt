@@ -103,3 +103,6 @@ PreToInfix
 76MinimumWindowSubstring
 b6PostfixToPrefixConversion
 b7PrefixToPostfixConversion
+b8ImplementTwoStacksInAnArray
+b9ReverseAStack
+b10ReversingTheFirstKOfAQueue
