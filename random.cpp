@@ -3,58 +3,72 @@
 #include <vector>
 #include <string>
 #include <random>
+#include <utility>
 
 using namespace std;
 
 int main() {
-    // Tối ưu hóa tốc độ đọc ghi (I/O) của C++
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string file_path = "/home/chanh/Desktop/my_src_code/DSA/problem.txt";
+    string file_path;
+
+    // Tự động kiểm tra hệ điều hành lúc compile
+    #if defined(_WIN32) || defined(_WIN64)
+        // Nếu là Windows
+        file_path = R"(D:\A_Programming\my_src_code\DSA\problem.txt)";
+    #elif defined(__linux__)
+        // Nếu là Linux 
+        // ⚠️ BẠN CẦN SỬA ĐOẠN NÀY: Thay bằng đường dẫn mà Linux mount ổ D của bạn vào nhé!
+        // Thường nó sẽ nằm trong /media/chanh/... hoặc /mnt/...
+        file_path = "/media/chanh/DATA/A_Programming/my_src_code/DSA/problem.txt"; 
+    #else
+        file_path = "problem.txt"; // Hệ điều hành khác thì dùng tạm tương đối
+    #endif
+
     ifstream file(file_path);
     
     if (!file.is_open()) {
-        cerr << "Không thể mở file tại đường dẫn: " << file_path << "\n";
+        cerr << "❌ Không thể mở file bài tập!\n";
+        cerr << "📍 Đường dẫn chương trình vừa cố mở là: " << file_path << "\n";
+        cerr << "👉 Mẹo cho Dual-boot:\n";
+        #if defined(__linux__)
+        cerr << "   - Hãy kiểm tra xem trên Linux bạn đã MOUNT (mở) ổ D chưa.\n";
+        cerr << "   - Đảm bảo đường dẫn '/media/...' trong code trùng với thực tế trên Linux.\n";
+        #endif
         return 1;
     }
 
-    // Định nghĩa một Struct để lưu cả nội dung bài và số thứ tự dòng gốc của nó
     struct Problem {
         string content;
         size_t original_index;
     };
 
     vector<Problem> problems;
-    problems.reserve(1000); // Dự đoán trước dung lượng để tránh reallocate
+    problems.reserve(1000);
 
     string line;
     size_t line_counter = 0;
 
     while (getline(file, line)) {
-        line_counter++; // Đếm số dòng (bao gồm cả dòng trống nếu có)
+        line_counter++;
         if (!line.empty()) {
-            // Lưu nội dung bài kèm theo số thứ tự dòng của nó
             problems.push_back({move(line), line_counter});
         }
     }
     file.close();
 
     size_t total_problems = problems.size();
-
     if (total_problems == 0) {
-        cout << "File bài tập trống! Hãy thêm danh sách bài tập vào file trước.\n";
+        cout << "File bài tập trống!\n";
         return 0;
     }
 
-    // Đủ ngẫu nhiên: Dùng Bộ sinh số Mersenne Twister 64-bit kết hợp phần cứng random_device
     random_device rd;
     mt19937_64 gen(rd()); 
     uniform_int_distribution<size_t> distr(0, total_problems - 1);
 
     size_t random_index = distr(gen);
-
-    // Lấy ra bài tập được chọn ngẫu nhiên
     const auto& chosen_problem = problems[random_index];
 
     cout << "========================================\n";
