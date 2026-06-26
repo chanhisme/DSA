@@ -1,5 +1,3 @@
-//- Remove All Occurrences Of An Element In An Array
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -10,11 +8,17 @@ int main(){
     int n, k; cin >> n >> k;
     vector <int> a(n);
     for(int &x : a) cin >> x;
-    int cnt = 0;
-    for(int i =0 ;i < n; i++){
-        if(a[i] != k){
-            cnt++;
+    long long sum = 0, cnt = 0;
+    int l = 0;
+    for(int i = 0; i < n; i++){
+        int x = a[i];
+        sum += x;
+        
+        while(sum >= k){
+            sum -= a[l];
+            l++;
         }
+        cnt += (i-l+1);
     }
     cout<<cnt;
     return 0;
