@@ -1,25 +1,32 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
-
-
-int main(){
-    int n, k; cin >> n >> k;
-    vector <int> a(n);
-    for(int &x : a) cin >> x;
-    long long sum = 0, cnt = 0;
-    int l = 0;
-    for(int i = 0; i < n; i++){
-        int x = a[i];
-        sum += x;
-        
-        while(sum >= k){
-            sum -= a[l];
-            l++;
-        }
-        cnt += (i-l+1);
+char bin[] = "01";
+vector <string> res;
+string tmp;
+void backtrack(int n){
+    if(tmp.size() == n){
+        res.push_back(tmp);
+        return;
     }
-    cout<<cnt;
+    for(int i = 0; i <= 1; i ++){
+        tmp.push_back(bin[i]);
+        backtrack(n);
+        tmp.pop_back();
+    }
+
+}
+void out(){
+    for(int i = 0; i < res.size(); i++){
+        cout<<res[i]<<" ";
+    }
+}
+int main(){
+    int n; cin >> n;
+    backtrack(n);
+    out();
+
+
+
     return 0;
 }
