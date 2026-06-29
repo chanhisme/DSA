@@ -4,6 +4,10 @@ using namespace std;
 
 int main(){
     int n, k; cin >> n >> k;
+    if(k == 0){
+        cout<<0;
+        return 0;
+    }
     vector <int>a(n);
     for(int &x : a) cin >> x;
     long long p = 1;
