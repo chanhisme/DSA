@@ -23,13 +23,13 @@ vector<int> tachThuaSo(int a)
 }
 
 long long phi(vector<int>& a, int n){
-    double res = 1;
+    long long res = n;
 
     for(int x : a){
-        res  = res / x * (x-1);
+        res  = res / x * (x-1); //triển khai dựa trên công thức phi hàm euler gốc
     }
 
-    return res * n;
+    return res;
 }
 int main(){
     int a; cin >> a;
