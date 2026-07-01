@@ -1,10 +1,33 @@
-4	Queue using Stacks	⬜
-5	Next Greater Element	⬜
-6	Previous Smaller Element	⬜
-7	Stock Span Problem	⬜
-8	Buildings Facing Sun	⬜
-9	Max Product of Indexes of Greater on Left and Right	⬜
-10	Min Stack (getMin)	⬜
-11	Stack using Queues	⬜
-12	Largest Rectangle in a Histogram	⬜
-13	Max of Mins of Every Window Size	⬜
+2. MONOTONIC STACK - LÀM TRƯỚC
+Next Greater Element
+
+Previous Smaller Element
+
+Buildings Facing Sun
+
+Stock Span Problem
+
+Max Product of Indexes of Greater
+
+3. DESIGN - LÀM KẾ TIẾP
+Queue using Stacks
+
+Stack using Queues
+
+Min Stack (getMin)
+
+DS O(1) (getMin + getMax)
+
+4. HARD - LÀM CUỐI CÙNG
+Largest Rectangle in Histogram
+
+Max of Mins of Every Window Size
+
+Sum of Max of All Subarrays
+
+Longest Valid Parentheses
+
+Remove K Digits
+
+Decode String
+
