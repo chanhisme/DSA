@@ -106,3 +106,4 @@ b7PrefixToPostfixConversion
 b8ImplementTwoStacksInAnArray
 b9ReverseAStack
 b10ReversingTheFirstKOfAQueue
+next Greater Element in Array
