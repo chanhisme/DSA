@@ -107,3 +107,5 @@ b8ImplementTwoStacksInAnArray
 b9ReverseAStack
 b10ReversingTheFirstKOfAQueue
 next Greater Element in Array
+Previous Smaller Element
+496NextGreaterElement_1
