@@ -1,59 +1,82 @@
 #include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 
-int ext_euclid(int a, int b, int &x, int &y) {
+ll ext_euclid(ll a, ll b, ll &x, ll &y) {
     if (b == 0) {
         x = 1;
         y = 0;
         return a;
     }
-    int x1, y1;
-    int d = ext_euclid(b, a % b, x1, y1);
+    ll x1, y1;
+    ll d = ext_euclid(b, a % b, x1, y1);
     x = y1;
     y = x1 - (a / b) * y1;
     return d;
 }
 
-pair<int, int> diophantineSolve(int a, int b, int c) {
+pair<ll, ll> diophantineSolve(ll a, ll b, ll c, ll &d_out) {
     c = -c;
-    int x, y;
-    int d = ext_euclid(a, b, x, y);
+    ll x, y;
+    ll d = ext_euclid(a, b, x, y);
+    d_out = d;
     if (c % d != 0) {
-        return {INT_MAX, INT_MAX};
+        return {LLONG_MAX, LLONG_MAX};
     }
-    int scale = c / d;
+    ll scale = c / d;
     x *= scale;
     y *= scale;
+    if(a < 0) x = -x;
+    if(b < 0) y = -y;
     return {x, y};
 }
 
-int cnt(pair<int, int> res, int x1, int x2, int y1, int y2, int a, int b) {
-    int x0 = res.first, y0 = res.second;
-    if (x0 == INT_MAX) return 0;
+ll cnt(pair<ll, ll> res, ll x1, ll x2, ll y1, ll y2, ll a, ll b, ll d) {
+    ll x0 = res.first, y0 = res.second;
+    if (x0 == LLONG_MAX) return 0;
 
-    int d = gcd(abs(a), abs(b));
-    int stepX = b / d;
-    int stepY = a / d;
+    ll stepX = b / d;
+    ll stepY = a / d;
 
-    int kx1 = (int)ceil((double)(x1 - x0) / stepX);
-    int kx2 = (int)floor((double)(x2 - x0) / stepX);
-    int ky1 = (int)ceil((double)(y0 - y2) / stepY); // 🔥 SỬA LẠI CHỖ NÀY
-    int ky2 = (int)floor((double)(y0 - y1) / stepY); // 🔥 SỬA LẠI CHỖ NÀY
+    ll kx1, kx2;
+    if (stepX > 0) {
+        kx1 = (ll)ceil((double)(x1 - x0) / stepX);
+        kx2 = (ll)floor((double)(x2 - x0) / stepX);
+    } else {
+        kx1 = (ll)ceil((double)(x2 - x0) / stepX);
+        kx2 = (ll)floor((double)(x1 - x0) / stepX);
+    }
 
-    int k_min = max(kx1, ky1);
-    int k_max = min(kx2, ky2);
+    ll ky1, ky2;
+    if (stepY > 0) {
+        ky1 = (ll)ceil((double)(y0 - y2) / stepY);
+        ky2 = (ll)floor((double)(y0 - y1) / stepY);
+    } else {
+        ky1 = (ll)ceil((double)(y0 - y1) / stepY);
+        ky2 = (ll)floor((double)(y0 - y2) / stepY);
+    }
+
+    ll k_min = max(kx1, ky1);
+    ll k_max = min(kx2, ky2);
 
     if (k_min > k_max) return 0;
     return k_max - k_min + 1;
 }
 
 int main() {
-    int a, b, c;
+    ll a, b, c;
     cin >> a >> b >> c;
-    int x1, x2, y1, y2;
+    ll x1, x2, y1, y2;
     cin >> x1 >> x2 >> y1 >> y2;
 
-    pair<int, int> res = diophantineSolve(a, b, c);
-    cout << cnt(res, x1, x2, y1, y2, a, b) << '\n';
+    if (a == 0 && b == 0) {
+        if (c == 0) cout << (x2 - x1 + 1) * (y2 - y1 + 1) << '\n'; // 0 + 0 = 0 nên nhận hết k
+        else cout << 0 << '\n';
+        return 0;
+    }
+
+    ll d;
+    pair<ll, ll> res = diophantineSolve(a, b, c, d);
+    cout << cnt(res, x1, x2, y1, y2, a, b, d) << '\n';
     return 0;
 }
