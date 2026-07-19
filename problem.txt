@@ -1,4 +1,4 @@
-- Remove All Occurrences Of An Element In An Array
+- Remove All Occurrences of an Element in an Array
 - Move Zero
 - Remove Duplicate
 - Reverse String
@@ -7,105 +7,150 @@
 - Pair Sum Sort Rotated
 - Closest Pair
 - Find the Closest Pair from Two Sorted Arrays
-- Smallest Subarray with Sum Greater Than a Given Value
+- Smallest Subarray with Sum Greater than a Given Value
 - Find the Number of Dominant Pairs
 - Sentence Palindrome
 - Intersection of Two Arrays with Distinct Elements
 - Count Pairs with Absolute Difference Equal to K
 - 3 Sum - Triplet Sum in Array
-- Find a Triplet Such That Sum of Two Equals to Third Element
+- Find a Triplet Such that Sum of Two Equals to Third Element
 - K-th Element of Merged Two Sorted Arrays
 - Union of Two Sorted Arrays
 - Merging Arrays
-- Number Of Smaller
-- Number Of Equal
-- Segment With Small Sum
-- Segment With Big Sum
-- Number Of Segments With Small Sum
-- Number Of Segments With Big Sum
-- Segments With Small Set
-- Segment With Small Spread
-
-- Generate Binary Strings
+- Number of Smaller
+- Number of Equal
+- Segment with Small Sum
+- Segment with Big Sum
+- Number of Segments with Small Sum
+- Number of Segments with Big Sum
+- Segments with Small Set
+- Segment with Small Spread
 - Binary Strings Without Consecutive 1s
 - Circular Binary Strings
-- K-bit Strings
-- Permutation
-- Permutations Of Given String
 - Combination 2
+- Duyet O Cung Canh
+- Duyet O Cung Dinh
+- Generate Binary Strings
+- K-bit Strings
 - N Queen
-- The Knight's Tour
+- Permutation
+- Permutations of Given String
+- Print All Palindromic Partitions of a String Using Bit Manipulation
 - Rat Maze
 - Sudoku
 - Sum Subset
+- The Knight's Tour
 - Tug of War
-- Print All Palindromic Partitions Of A String Using Bit Manipulation
-- Check if an Array is a Subset of Another Array
+- Check If an Array is Subset of Another Array
 - Equilibrium Index
-- Split an Array into Two Equal Sum Subarrays
+- Split an Array Into Two Equal Sum Subarrays
 - Mean of Range in Array
 - Original Array from Given Prefix Sums
 - Product of Array Except Self
-- Longest Subarray With Sum K
+- Longest Subarray with Sum K
 - Minimum Removals for Target Sum
 - Subarray with Sum Zero
 - Longest Span with Same Sum in Two Binary Arrays
-- Largest Submatrix With Sum 0
+- Largest Submatrix with Sum 0
 - Maximum Occurring Integer in Given Ranges
 - Compute Matrix Before Given Operations
 - Longest Span With Same Sum In Two Binary Arrays (v2)
-- Maximum Sum Rectangle In A 2D Matrix
-- Count Subarrays With Sum Divisible By K
+- Maximum Sum Rectangle in a 2D Matrix
+- Count Subarrays with Sum Divisible by K
 - Count Subarrays Having Sum K
 - Smallest Sum Contiguous Subarray
-- Binary Subarray Sum
 - Subarray Counting
+- Binary Subarray Sum
 - Maximum Sum of a Subarray of Size K
-- Smallest Window Containing 0, 1 and 2
-- Check if Permutation of Pattern is Substring
+- Smallest Window Containing 0 1 and 2
+- Check If Permutation of Pattern is Substring
 - Count Strictly Increasing Subarrays
 - Remove All Consecutive Duplicates from a String
-- Maximum Sum Subarray Having Sum Less Than or Equal to Given Sum
-- Longest Substring Without Repeating Characters
+- Maximum Sum Subarray Having Sum Less than or Equal to Given Sum
 - Maximum Consecutive Ones After Flipping Zeroes
+- Longest Substring Without Repeating Characters
 - Count Substrings with K Distinct Characters
 - Longest Subarray with K Sections of Unique Items
 - Count of Substrings of Length K with Exactly K-1 Distinct Characters
 - Minimum Removals for Target Sum
 - Longest Substring Having All Same Characters After K Changes
 - Count of Subarrays with Sum Equals K in Given Binary Array
-- Subarrays Having Product Less Than K
+- Subarrays Having Product Less than K
 - Count Anagrams of a Pattern
 - Largest Sum Subarray of Size at Least K
-- Count Distinct In Every Window of Size K
+- Count Distinct in Every Window of Size K
 - Subarray with Given Sum
 - First Negative in Every Window of Size K
-- Smallest Window That Contains All Characters of String Itself
+- Smallest Window that Contains All Characters of String Itself
 - Smallest Window in a String Containing All Characters of Other String
 - Count Full Distinct Subarrays
-- Valid Parentheses
 - Evaluation of Postfix Expression
 - Infix to Postfix Expression
 - Infix to Prefix Notation
 - Postfix to Infix
+- Pre to Infix
+- Postfix to Prefix Conversion
+- Prefix to Postfix Conversion
+- Implement Two Stacks in an Array
+- Reverse a Stack
+- Reversing the First K of a Queue
+- Check for Balanced Parentheses
+- Next Greater Element in Array
+- Previous Smaller Element
+- Implement Queue Using Stacks
+- Stack Using Queues
+- Stack That Supports Get Min
 - Check for Binary String
 - Camel Case of a Given Sentence
-- Longest Substring Without Repeating Characters
+- Modulo
+- Extended Euclid
+- Inverse Mod
+- Binary Exponenation
+- Little Fermat
+- Phi Euler
+- Combination
+- VNOJ Đếm Đi Các Bạn Ơiiii
+- 10104. Euclid Problem
+- Basic Number Theory Exercise 1
+- Basic Number Theory Exercise 2
+- Basic Number Theory Exercise 3
+- 1. Two Sum
+- 3. Longest Substring Without Repeating Characters
+- 7. Longest Consecutive Sequence
+- 9. Palindrome Number
 - 13. Roman to Integer
 - 14. Longest Common Prefix
 - 20. Valid Parentheses
+- 53. Maximum Subarray
 - 66. Plus One
 - 67. Add Binary
-- 7. Longest Consecutive Sequence
+- 76. Minimum Window Substring
 - 455. Assign Cookies
+- 496. Next Greater Element I
 - 541. Reverse String II
-PreToInfix
-76MinimumWindowSubstring
-b6PostfixToPrefixConversion
-b7PrefixToPostfixConversion
-b8ImplementTwoStacksInAnArray
-b9ReverseAStack
-b10ReversingTheFirstKOfAQueue
-next Greater Element in Array
-Previous Smaller Element
-496NextGreaterElement_1
+- Watermelon
+- Way Too Long Words
+- Team
+- Next Round (158A)
+- Bit++
+- Domino Piling (50A)
+- Beautiful Matrix (263A)
+- Petya and Strings (112A)
+- Boy or Girl (236A)
+- Helpful Maths (339A)
+- Word Capitalization (281A)
+- Bear and Big Brother (791A)
+- Elephant (617A)
+- Stones on the Table (266A)
+- Soldier and Bananas (546A)
+- Word (59A)
+- Wrong Subtraction (977A)
+- Nearly Lucky Number (110A)
+- The Equation
+- Calculating Function (486A)
+- Drinks (200B)
+- Divisibility Problem (1328A)
+- Insomnia Cure (148A)
+- Game with Integers (1899A)
+- Design Tutorial Learn from Math (472A)
+- Max GCD (1370A)
