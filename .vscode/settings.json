@@ -1,3 +1,4 @@
 {
-    "snyk.advanced.autoSelectOrganization": true
+    "snyk.advanced.autoSelectOrganization": true,
+    "C_Cpp.default.compilerPath": "D:/mingw64/bin/gcc.exe"
 }
