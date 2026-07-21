@@ -1,26 +1,46 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int main(){
-    int n, k; cin >> n >> k;
-    if(k == 0){
-        cout<<0;
+bool isSplit(vector<int>& a) {
+    int n = a.size();
+    int t = a[a.size() - 1] / 2;
+    for (int i = 0; i < n; i++) {
+        if (a[i] == t) {
+            return true;
+        }
+    }
+    return false;
+}
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    int n;
+    cin >> n;
+    if(n < 2){
+        cout<<"false";
         return 0;
     }
-    vector <int>a(n);
-    for(int &x : a) cin >> x;
-    long long p = 1;
-    int cnt = 0;
-    int l = 0;
-    for(int i = 0; i < n; i++){
-        p *= a[i];
-        while(p >= k){
-            p /= a[l];
-            l++;
-        }
-        cnt += (i-l+1);
+    vector<int> a(n), b;
+    for (int& x : a) cin >> x;
+
+    for (int i = 1; i < a.size(); i++) {
+        a[i] += a[i - 1];
     }
-    cout<<cnt;
+
+    
+    if(a[a.size()-1] % 2 != 0){
+        cout<<"false";
+        return 0;
+    }
+
+
+    if (isSplit(a))
+        cout << "true";
+    else
+        cout << "false";
+
     return 0;
 }
