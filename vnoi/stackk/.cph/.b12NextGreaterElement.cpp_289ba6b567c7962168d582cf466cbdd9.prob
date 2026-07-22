@@ -1,0 +1,1 @@
+{"name":"Local: b12NextGreaterElement","url":"d:\\A_Programming\\my_src_code\\DSA\\vnoi\\stackk\\b12NextGreaterElement.cpp","tests":[{"id":1784687375362,"input":"5\n4 1 3 5 2","output":"5 3 5 -1 -1 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\A_Programming\\my_src_code\\DSA\\vnoi\\stackk\\b12NextGreaterElement.cpp","group":"local","local":true}
