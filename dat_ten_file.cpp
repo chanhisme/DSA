@@ -6,8 +6,8 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    string s;
-    getline(cin, s);
+    string s = "Beautiful Year";
+    // getline(cin, s);
     int n = s.size();
     int i = 0;
     while(s[i] != '\0'){
